@@ -1,5 +1,18 @@
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+
 const GsapTo = () => {
   // TODO: Implement the gsap.to() method
+  // used like useEffect and have state variables declared in the dependency array
+  useGSAP(() => {
+    gsap.to("#blue-box", {
+      x: 250,
+      repeat: -1,
+      yoyo: true,
+      rotation: 360,
+      ease: "",
+    })
+  }, []);
 
   return (
     <main>
